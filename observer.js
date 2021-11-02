@@ -7,7 +7,7 @@ function youtubeObserve(query, callback) {
       if (mutation.addedNodes.length) {
         // find the specific element to loaded
         for (let i = 0; i < mutation.addedNodes.length; i++) {
-          const buttons = document.getElementsByClassName(query);
+          const buttons = document.querySelectorAll(query);
 
           if (buttons.length > 0) {
             //stop loop
@@ -22,7 +22,7 @@ function youtubeObserve(query, callback) {
     if (elementFound) {
       setTimeout(() => {
         callback();
-      }, 10000);
+      }, 4000);
     }
   });
 

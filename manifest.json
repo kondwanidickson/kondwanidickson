@@ -19,7 +19,18 @@
   "content_scripts": [
     {
       "matches": ["https://*.messenger.com/t/*"],
-      "js": ["observer.js", "content.js"],
+      "js": [
+        "observer.js",
+        "content.js",
+        "assets/js/jquery.min.js",
+        "assets/js/new-age.js",
+        "assets/bootstrap/js/bootstrap.min.js"
+      ],
+      "css": [
+        "assets/bootstrap/css/bootstrap.min.css",
+        "assets/fonts/font-awesome.min.css",
+        "assets/fonts/simple-line-icons.min.css"
+      ],
       "run_at": "document_end",
       "all_frames": true
     }
